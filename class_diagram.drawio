@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" modified="2023-05-31T15:22:53.434Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" version="21.3.6" etag="3VPdDGZVUvYs4R-Uu6Mf" type="device">
+  <diagram id="-kNtIhn91phltAwalVCA" name="Page-1">
+    <mxGraphModel dx="2234" dy="1164" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;App&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ main(String[]): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="275" y="549" width="149" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="node4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;InputHandler&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- serviceTimeMax: int&lt;br/&gt;- serviceTimeMin: int&lt;br/&gt;- fileWriter: FileWriter&lt;br/&gt;- simulationInterval: int&lt;br/&gt;- tasks: int&lt;br/&gt;- arrivalTimeMin: int&lt;br/&gt;- queues: int&lt;br/&gt;- arrivalTimeMax: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ setQueues(int): void&lt;br/&gt;+ getArrivalTimeMin(): int&lt;br/&gt;+ setFileWriter(FileWriter): void&lt;br/&gt;+ getQueues(): int&lt;br/&gt;+ getServiceTimeMax(): int&lt;br/&gt;+ getServiceTimeMin(): int&lt;br/&gt;+ getSimulationInterval(): int&lt;br/&gt;+ getArrivalTimeMax(): int&lt;br/&gt;+ getFileWriter(): FileWriter&lt;br/&gt;+ setArrivalTimeMax(int): void&lt;br/&gt;+ setServiceTimeMin(int): void&lt;br/&gt;+ setServiceTimeMax(int): void&lt;br/&gt;+ getTasks(): int&lt;br/&gt;+ setSimulationInterval(int): void&lt;br/&gt;+ setArrivalTimeMin(int): void&lt;br/&gt;+ setTasks(int): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-220" y="15" width="208" height="561" as="geometry" />
+        </mxCell>
+        <mxCell id="node2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Scheduler&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- maxTasksPerServer: int&lt;br/&gt;- servers: ArrayList&amp;lt;Server&amp;gt;&lt;br/&gt;- maxNoServers: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ setMaxTasksPerServer(int): void&lt;br/&gt;+ getMaxNoServers(): int&lt;br/&gt;+ printQueues(FileWriter): void&lt;br/&gt;+ setMaxNoServers(int): void&lt;br/&gt;+ minimumQueue(): Server&lt;br/&gt;+ getMaxTasksPerServer(): int&lt;br/&gt;+ dispatchTask(Task): void&lt;br/&gt;+ getServers(): ArrayList&amp;lt;Server&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="138" y="674" width="212" height="275" as="geometry" />
+        </mxCell>
+        <mxCell id="node5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Server&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- tasks: BlockingQueue&amp;lt;Task&amp;gt;&lt;br/&gt;- waitingPeriod: AtomicInteger&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getTasks(): BlockingQueue&amp;lt;Task&amp;gt;&lt;br/&gt;+ setTasks(BlockingQueue&amp;lt;Task&amp;gt;): void&lt;br/&gt;+ toString(): String&lt;br/&gt;+ addTask(Task): void&lt;br/&gt;+ run(): void&lt;br/&gt;+ getWaitingPeriod(): AtomicInteger&lt;br/&gt;+ setWaitingPeriod(AtomicInteger): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="54" y="246" width="249" height="231" as="geometry" />
+        </mxCell>
+        <mxCell id="node0" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SimulationManager&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ tasks: ArrayList&amp;lt;Task&amp;gt;&lt;br/&gt;- scheduler: Scheduler&lt;br/&gt;+ input: InputHandler&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- generateNRandomTasks(): void&lt;br/&gt;- displayGeneratedTasks(): void&lt;br/&gt;+ run(): void&lt;br/&gt;- getNrOfTasks(ArrayList&amp;lt;Server&amp;gt;): int&lt;br/&gt;- onClose(int, int, int): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-416" y="658" width="239" height="209" as="geometry" />
+        </mxCell>
+        <mxCell id="node3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Task&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- id: int&lt;br/&gt;- arrivalTime: int&lt;br/&gt;- serviceTime: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ setArrivalTime(int): void&lt;br/&gt;+ setServiceTime(int): void&lt;br/&gt;+ getServiceTime(): int&lt;br/&gt;+ getArrivalTime(): int&lt;br/&gt;+ toString(): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="107" y="-81" width="175" height="209" as="geometry" />
+        </mxCell>
+        <mxCell id="edge0" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThin;endArrow=openThin;endSize=12;strokeColor=#000000;exitX=0.193;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;startFill=1;strokeWidth=2;" parent="1" source="node2" target="node5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label0" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge0" vertex="1" connectable="0">
+          <mxGeometry x="168" y="652" as="geometry" />
+        </mxCell>
+        <mxCell id="label4" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge0" vertex="1" connectable="0">
+          <mxGeometry x="170" y="482" as="geometry" />
+        </mxCell>
+        <mxCell id="label5" value="servers" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge0" vertex="1" connectable="0">
+          <mxGeometry x="179" y="482" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThin;endArrow=openThin;endSize=12;strokeColor=#000000;exitX=0.563;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;startFill=1;strokeWidth=2;" parent="1" source="node5" target="node3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label24" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge4" vertex="1" connectable="0">
+          <mxGeometry x="184" y="219" as="geometry" />
+        </mxCell>
+        <mxCell id="label28" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge4" vertex="1" connectable="0">
+          <mxGeometry x="182" y="167" as="geometry" />
+        </mxCell>
+        <mxCell id="label29" value="tasks" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge4" vertex="1" connectable="0">
+          <mxGeometry x="235" y="133" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThin;endArrow=openThin;endSize=12;strokeColor=#000000;exitX=0.969;exitY=0.000;exitDx=0;exitDy=0;entryX=0.169;entryY=1.000;entryDx=0;entryDy=0;startFill=1;strokeWidth=2;" parent="1" source="node0" target="node4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label18" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge3" vertex="1" connectable="0">
+          <mxGeometry x="-182" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="label22" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge3" vertex="1" connectable="0">
+          <mxGeometry x="-196" y="581" as="geometry" />
+        </mxCell>
+        <mxCell id="label23" value="input" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge3" vertex="1" connectable="0">
+          <mxGeometry x="-185" y="581" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThin;endArrow=openThin;endSize=12;strokeColor=#000000;exitX=1.000;exitY=0.735;exitDx=0;exitDy=0;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;startFill=1;strokeWidth=2;" parent="1" source="node0" target="node2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label12" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge2" vertex="1" connectable="0">
+          <mxGeometry x="-128" y="797" as="geometry" />
+        </mxCell>
+        <mxCell id="label16" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge2" vertex="1" connectable="0">
+          <mxGeometry x="122" y="797" as="geometry" />
+        </mxCell>
+        <mxCell id="label17" value="scheduler" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge2" vertex="1" connectable="0">
+          <mxGeometry x="74" y="832" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThin;endArrow=openThin;endSize=12;strokeColor=#000000;exitX=1.000;exitY=0.262;exitDx=0;exitDy=0;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;startFill=1;strokeWidth=2;" parent="1" source="node0" target="node3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="22" y="713" />
+              <mxPoint x="22" y="23" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label6" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge1" vertex="1" connectable="0">
+          <mxGeometry x="8" y="129" as="geometry">
+            <mxPoint x="-148" y="557" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label10" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge1" vertex="1" connectable="0">
+          <mxGeometry x="93" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="label11" value="tasks" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" parent="edge1" vertex="1" connectable="0">
+          <mxGeometry x="68" y="31" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
